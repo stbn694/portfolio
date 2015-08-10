@@ -20,7 +20,7 @@ $(document).ready(function () {
 	    if (Math.abs(offset - pos) > 5) {
 		    $('html, body').stop().animate({
 		        'scrollTop': offset
-		    }, 1600, 'swing', function () {
+		    }, 1600, 'easeInOutCirc', function () {
 		        window.location.hash = target;
 		    });
 		}
