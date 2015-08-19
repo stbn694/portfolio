@@ -1,5 +1,5 @@
 window.onload = function() {
-	$('#loading').hide();
+	$('#loading').fadeOut('slow');
 }
 
 $(document).ready(function () {
