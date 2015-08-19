@@ -1,12 +1,8 @@
 window.onload = function() {
-	$('*').show();
 	$('#loading').hide();
 }
 
 $(document).ready(function () {
-
-	$('*').hide();
-	$('#loading').show();
 
 	/* Navigation bar smooth scroll */
 
