@@ -104,6 +104,7 @@ $(document).ready(function () {
 	var changeResume = function (sec) {
 		$('#resume section:not([id=' + sec + '])').hide();
 		$('#' + sec).fadeIn(800, 'swing');
+		$('#' + sec).css('display', 'flex');
 		$('#' + sec + '-link').css('border-bottom-color', '#FFFFFF');
 		$('.nav-resume li:not([id="' + sec + '-link"])').css('border-bottom-color', 'transparent');
 	}

@@ -50,7 +50,7 @@
 		<article class="no-color" id="about">
 			<div class="container">
 				<h2>About me</h2>
-				<div class="right-cont">
+				<div class="flex-cont">
 					<div class="descr">
 						<h3>Who I am</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ex vehicula, maximus elit vitae, pharetra nisl. Nunc lobortis lacus urna, sit amet molestie ex auctor vel. Quisque nec turpis libero. Donec tempus fringilla mauris. Ut nulla eros, efficitur nec tortor eu, lacinia eleifend nunc. Nunc feugiat hendrerit nibh at finibus. Morbi elit ante, ornare quis ullamcorper tincidunt, accumsan eu tortor. Sed eget tristique massa, lobortis feugiat mi. Etiam tristique diam id accumsan venenatis. Morbi arcu tortor, sagittis at sem vitae, sagittis mattis massa. Etiam elementum commodo mattis. Proin nec elit eros. Nunc hendrerit suscipit libero, quis congue turpis pretium.</p>
@@ -245,19 +245,20 @@
 					<li>stbn694@gmail.com</li>
 					<li>www.estebangerpe.com</li>
 				</ul>
-				<!-- Mapa -->
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.76807085508!2d-8.5545693!3d42.8777392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe6b94735535%3A0xafdbef4f812f11ea!2sRodr%C3%ADguez+Cadarso+College%2C+15705+Santiago+de+Compostela%2C+A+Coru%C3%B1a!5e0!3m2!1sen!2ses!4v1438992129886" frameborder="0" scrollwheel="false" allowfullscreen></iframe>
+				<div class="map-form">
+					<!-- Mapa -->
+					<div class="map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.76807085508!2d-8.5545693!3d42.8777392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe6b94735535%3A0xafdbef4f812f11ea!2sRodr%C3%ADguez+Cadarso+College%2C+15705+Santiago+de+Compostela%2C+A+Coru%C3%B1a!5e0!3m2!1sen!2ses!4v1438992129886" frameborder="0" scrollwheel="false" allowfullscreen></iframe>
+					</div>
+					<!-- Formulario de contacto -->
+					<form novalidate>
+						<input type="text" placeholder="Name" name="name">
+						<input type="email" placeholder="Email" name="email">
+						<input type="text" placeholder="Subject" name="subject">
+						<textarea placeholder="Message" name="message"></textarea>
+						<input class="bottom-btn" type="submit" value="Send message">
+					</form>
 				</div>
-				<!-- Formulario de contacto -->
-				<form novalidate>
-					<input type="text" placeholder="Name" name="name">
-					<input type="email" placeholder="Email" name="email">
-					<input type="text" placeholder="Subject" name="subject">
-					<textarea placeholder="Message" name="message"></textarea>
-					<input class="bottom-btn" type="submit" value="Send message">
-				</form>
-				<div id="clearer"></div>
 			</div>
 		</article>
 

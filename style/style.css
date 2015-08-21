@@ -6,6 +6,7 @@ body {
 	background-size: cover;
 	background-position: center top;
 	background-attachment: fixed;
+	/*font-size: 1em;*/
 }
 
 #loading {
@@ -17,11 +18,13 @@ body {
 	background-image: url(../images/loading.GIF);
 	background-repeat: no-repeat;
 	background-position: center center;
+	visibility: hidden;
 }
 
 .container {
 	padding: 0;
 	width: 70%;
+	max-width: 1500px;
 	margin: 0 auto 0 auto;
 	height: inherit;
 }
@@ -32,7 +35,7 @@ body {
 	width: 100%;
 	height: 80px;
 	background-color: #FFFFFF;
-	box-shadow: 0 5px 30px #202020;
+	box-shadow: 0 -0px 30px #202020;
 	z-index: 10;
 	position: absolute;
 	position: fixed;
@@ -42,7 +45,8 @@ body {
 	text-transform: uppercase;
 	float: left;
 	line-height: 20px;
-	font-size: 20px;
+	/*font-size: 1.25rem;*/
+	font-size: 125%;
 	font-weight: lighter;
 }
 
@@ -110,7 +114,8 @@ header .table-disp {
 }
 
 .header h1 {
-	font-size: 72px;
+	/*font-size: 4.5rem;*/
+	font-size: 450%;
 	font-weight: bolder;
 	margin: 0;
 }
@@ -120,14 +125,16 @@ header .table-disp {
 }
 
 .header p {
-	font-size: 18px;
+	/*font-size: 1.125rem;*/
+	font-size: 112.5%;
 	font-weight: lighter;
 	margin: 0;
 }
 
 .header a {
 	display: inline-block;
-	font-size: 16px;
+	/*font-size: 1rem;*/
+	font-size: 100%;
 	font-weight: bold;
 	text-decoration: none;
 	color: #FFFFFF;
@@ -182,7 +189,8 @@ article.no-color {
 
 article.no-color h2 {
 	text-transform: uppercase;
-	font-size: 42px;
+	/*font-size: 2.625rem;*/
+	font-size: 262.5%;
 	color: #009688;
 	font-weight: bold;
 	margin: 0;
@@ -194,7 +202,8 @@ article.with-color {
 
 article.with-color h2 {
 	text-transform: uppercase;
-	font-size: 42px;
+	/*font-size: 2.625rem;*/
+	font-size: 262.5%;
 	color: #FFFFFF;
 	font-weight: bold;
 	margin: 0;
@@ -202,21 +211,32 @@ article.with-color h2 {
 
 /* About me */
 
+.flex-cont {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	flex-flow: row wrap;
+}
+
 .descr, .info {
-	float: left;
+	flex: 2;
 	background-color: #FFFFFF;
 	margin: 10px;
 	padding: 20px;
-	width: 40%;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px #606060;
+}
+
+.descr {
+	flex: 3;
 }
 
 #about h3 {
 	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 30px;
-	font-size: 16px;
+	/*font-size: 1rem;*/
+	font-size: 100%;
 	color: #303030;
 }
 
@@ -229,7 +249,8 @@ article.with-color h2 {
 	display: inline-block;
 	padding: 5px;
 	text-transform: uppercase;
-	font-size: 14px;
+	/*font-size: 0.875rem;*/
+	font-size: 87.5%;
 	color: #009688;
 	text-decoration: none;
 	float: right;
@@ -245,7 +266,8 @@ article.with-color h2 {
 }
 
 .info .info-label {
-	font-size: 12px;
+	/*font-size: 0.75rem;*/
+	font-size: 75%;
 	text-transform: uppercase;
 	margin: 0;
 	margin-left: 20px;
@@ -256,19 +278,20 @@ article.with-color h2 {
 .social {
 	clear: both;
 	padding-top: 20px;
+	flex: 1 100%;
 }
 
 .social ul {
+	text-align: center;
 	margin: 0;
 	padding: 0;
-	padding-left: 10px;
 }
 
 .social li {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	margin-right: 10px;
+	margin: 0 5px;
 }
 
 .social li a {
@@ -304,7 +327,8 @@ article.with-color h2 {
 	padding: 0;
 	margin-right: 20px;
 	text-transform: uppercase;
-	font-size: 14px;
+	/*font-size: 0.875rem;*/
+	font-size: 87.5%;
 	font-weight: lighter;
 	color: #FFFFFF;
 	border-bottom: 4px solid transparent;
@@ -334,32 +358,35 @@ article.with-color h2 {
 }
 
 .sect-descr {
-	width: 30%;
-	margin: 20px;
+	flex: 1;
+	margin: 0 40px 20px 20px;
 	background-color: #FFFFFF;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px #606060;
 	padding: 20px;
-	float: left;
 }
 
 .sect-descr h3 {
 	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 30px;
-	font-size: 26px;
+	/*font-size: 1.625rem;*/
+	font-size: 162.5%;
 	color: #303030;
 }
 
 #skills, #edu, #courses {
 	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	justify-content: flex-end;
 }
 
 .skill {
-	width: 60px;
+	width: 50px;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px #606060;
-	float: right;
 	margin-right: 20px;
 }
 
@@ -370,14 +397,15 @@ article.with-color h2 {
 	line-height: 50px;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 12px;
+	/*font-size: 0.75rem;*/
+	font-size: 75%;
 	font-weight: lighter;
 	background-color: #FFFFFF;
 }
 
 .skill-box {
 	width: 100%;
-	height: 400px;
+	height: 300px;
 }
 
 .skill-box p {
@@ -385,7 +413,8 @@ article.with-color h2 {
 	width: 100%;
 	color: #FFFFFF;
 	text-align: center;
-	font-size: 12px;
+	/*font-size: 0.75rem;*/
+	font-size: 75%;
 	float: right;
 	padding: 10px 0;
 }
@@ -404,13 +433,13 @@ article.with-color h2 {
 	background-color: #FFFFFF;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px #606060;
-	float: right;
 }
 
 .years {
 	padding: 10px 20px;
 	margin: 0;
-	font-size: 14px;
+	/*font-size: 0.875rem;*/
+	font-size: 87.5%;
 	font-weight: bold;
 }
 
@@ -434,7 +463,8 @@ article.with-color h2 {
 .st-name {
 	padding: 10px 20px;
 	text-transform: uppercase;
-	font-size: 14px;
+	/*font-size: 0.875rem;*/
+	font-size: 87.5%;
 	color: #FFFFFF;
 	background-color: #009688;
 	font-weight: bold;
@@ -443,7 +473,8 @@ article.with-color h2 {
 .uni {
 	padding: 10px 20px;
 	text-transform: uppercase;
-	font-size: 12px;
+	/*font-size: 0.75rem;*/
+	font-size: 75%;
 	font-weight: lighter;
 }
 
@@ -465,18 +496,19 @@ article.with-color h2 {
 	background-color: #FFFFFF;
 	box-shadow: 0 1px 2px #606060;
 	margin: 20px 0;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
 }
 
 .proj figure {
-	width: 40%;
-	min-width: 200px;
 	padding: 20px;
 	padding-right: 0;
 	margin: 0;
 	box-sizing: border-box;
 	overflow: hidden;
-	float: left;
 	text-align: center;
+	flex: 4;
 }
 
 .proj figure img {
@@ -485,27 +517,32 @@ article.with-color h2 {
 }
 
 .details {
-	width: 60%;
-	float: left;
 	padding: 20px;
 	box-sizing: border-box;
+	flex: 6;
 }
 
 .title {
 	text-transform: uppercase;
     margin: 0;
     margin-bottom: 30px;
-    font-size: 16px;
+    /*font-size: 1rem;*/
+    font-size: 100%;
     color: #303030;
+}
+
+.proj .btn-clear {
+	flex: 1 100%;
 }
 
 /* Contact */
 
 #contact p {
 	color: #FFFFFF;
-	font-size: 16px;
+	/*font-size: 1rem;*/
+	font-size: 100%;
 	font-weight: lighter;
-	margin-top: 3em;
+	margin-top: 3rem;*/
 }
 
 #contact ul {
@@ -518,7 +555,8 @@ article.with-color h2 {
 	padding: 0 10px;
 	color: #FFFFFF;
 	font-weight: bold;
-	font-size: 16px;
+	/*font-size: 1rem;*/
+	font-size: 100%;
 }
 
 #contact ul li:first-child {
@@ -530,14 +568,18 @@ article.with-color h2 {
 	border-right: 1px solid #FFFFFF;
 }
 
+.map-form {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 .map {
 	margin: 0;
 	padding-right: 20px;
-	width: 60%;
 	box-sizing: border-box;
 	height: 500px;
-	float: left;
 	overflow: hidden;
+	flex: 6;
 }
 
 .map iframe {
@@ -550,12 +592,11 @@ article.with-color h2 {
 #contact form {
 	margin: 0;
 	padding: 20px;
-	width: 40%;
 	box-sizing: border-box;
 	background-color: #FFFFFF;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px #606060;
-	float: right;
+	flex: 4;
 }
 
 #contact form input:not([type="submit"]), #contact form textarea {
@@ -564,7 +605,8 @@ article.with-color h2 {
 	margin: 10px 0;
 	padding: 10px;
 	line-height: 32px;
-	font-size: 16px;
+	/*font-size: 1rem;*/
+	font-size: 100%;
 	box-sizing: border-box;
 	font-family: inherit;
 	border: none;
@@ -587,6 +629,7 @@ article.with-color h2 {
 }
 
 #contact form textarea {
+	line-height: normal;
 	height: 165px !important;
 }
 
@@ -670,12 +713,14 @@ footer {
 	line-height: 20px;
 	padding: 0;
 	margin: 0;
-	font-size: 14px;
+	/*font-size: 0.875rem;*/
+	font-size: 87.5%;
 	white-space: pre-wrap;
 }
 
 .copyright p:first-child {
-	font-size: 12px;
+	/*font-size: 0.75rem;*/
+	font-size: 75%;
 }
 
 .copyright a {
@@ -687,3 +732,37 @@ footer {
 .copyright a:hover {
 	color: #FFFFFF;
 }
+
+
+
+/***** - MEDIA QUERIES - *****/
+
+/* 650px - 1100px */
+
+@media all and (max-device-width: 1100px), all and (max-width: 1100px) {
+	.container {
+		width: 90%;
+	}
+}
+
+/* -650px */
+
+@media all and (max-device-width: 650px), all and (max-width: 650px) {
+	.container {
+		width: 95%;
+	}
+
+	.descr, .info, .sect-descr, .proj figure, .details, .map, #contact form {
+		flex: 1 100%;
+	}
+
+	.sect-descr {
+		margin-right: 20px;
+	}
+
+	.map {
+		padding: 0;
+		margin-bottom: 20px;
+	}
+}
+
