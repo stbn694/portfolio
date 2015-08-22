@@ -22,13 +22,17 @@ $(document).ready(function () {
 	    }
 
 	    if (Math.abs(offset - pos) > 5) {
-	    	menuSlide();
 		    $('html, body').stop().animate({
 		        'scrollTop': offset
 		    }, 1600, 'easeInOutCirc', function () {
 		        window.location.hash = target;
 		    });
 		}
+	});
+
+	$('li > a[href^="#"]').on('click', function (e) {
+	    e.preventDefault();
+	    menuSlide();
 	});
 
 
@@ -150,6 +154,17 @@ $(document).ready(function () {
 		} else {
 			$(this).css('border-bottom-color', '#EEEEEE');
 		}
+	});
+
+
+	/* Prevent zooming on the map */
+
+	$('.map iframe').addClass('scrolloff');
+	$('.map').click(function () {
+		$('.map iframe').removeClass('scrolloff');
+	});
+	$('.map iframe').mouseleave(function () {
+		$('.map iframe').addClass('scrolloff');
 	});
 
 

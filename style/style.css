@@ -734,6 +734,12 @@ footer {
 	color: #FFFFFF;
 }
 
+/* Adicional */
+
+.scrolloff {
+	pointer-events: none;
+}
+
 
 
 /***** - MEDIA QUERIES - *****/
