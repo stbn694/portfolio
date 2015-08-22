@@ -22,6 +22,7 @@ $(document).ready(function () {
 	    }
 
 	    if (Math.abs(offset - pos) > 5) {
+	    	menuSlide();
 		    $('html, body').stop().animate({
 		        'scrollTop': offset
 		    }, 1600, 'easeInOutCirc', function () {
@@ -70,6 +71,10 @@ $(document).ready(function () {
 
 	var menuShown = false;
 	$('.menu-btn').click(function () {
+		menuSlide();
+	});
+
+	var menuSlide = function () {
 		if(menuShown) {
 			$('.menu-btn').attr("src","images/burger.png");
 			menuShown = false;
@@ -78,7 +83,7 @@ $(document).ready(function () {
 			menuShown = true;
 		}
 		$('.nav-general .links').stop().slideToggle(800);
-	});
+	}
 
 
 	/* Highlight the carrect link in the navigation bar based on the scrolling */
