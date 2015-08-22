@@ -31,7 +31,6 @@ body {
 
 .nav-general {
 	width: 100%;
-	/*height: 80px;*/
 	background-color: #FFFFFF;
 	box-shadow: 0 -0px 30px #202020;
 	z-index: 10;
@@ -39,12 +38,24 @@ body {
 	position: fixed;
 }
 
+.nav-general .container {
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.menu-btn {
+	display: none;
+}
+
 .nav-general p {
 	text-transform: uppercase;
-	float: left;
 	line-height: 1.25rem;
 	font-size: 1.25rem;
 	font-weight: lighter;
+	display: block;
+	flex: 1;
 }
 
 .nav-general p a {
@@ -57,13 +68,15 @@ body {
 }
 
 .nav-general .links {
-	float: right;
 	height: inherit;
 }
 
 .nav-general ul {
 	margin: 0;
 	height: inherit;
+	display: flex;
+	align-items: flex-start;
+	flex-flow: row nowrap;
 }
 
 .nav-general li {
@@ -349,6 +362,7 @@ article.with-color h2 {
 
 .sect-descr {
 	flex: 1;
+	min-width: 250px;
 	margin: 0 1rem 1rem 1rem;
 	background-color: #FFFFFF;
 	border-radius: 2px;
@@ -647,9 +661,16 @@ footer {
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
+.footer-flex {
+	display: flex;
+	align-items: flex-start;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
 .social-foot {
 	padding: 2rem 0;
-	float: left;
+	flex: 1;
 }
 
 .social-foot ul {
@@ -686,6 +707,7 @@ footer {
 
 .copyright {
 	padding: 2rem 0;
+	flex: 1;
 }
 
 .copyright p {
@@ -727,6 +749,9 @@ footer {
 /* -650px */
 
 @media all and (max-width: 650px) {
+
+	/* General */
+
 	html {
 		font-size: 90%;
 	}
@@ -735,12 +760,78 @@ footer {
 		width: 95%;
 	}
 
+	article {
+		padding: 4rem 0;
+	}
+
 	.descr, .info, .sect-descr, .proj figure, .details, .map, #contact form {
 		flex: 1 100%;
 	}
 
+	/* Barra de navegacion */
+
+	.nav-general {
+		position: absolute;
+		top: 0 !important;
+	}
+
+	.menu-btn {
+		width: 1.5rem;
+		margin-right: 1rem;
+		padding: 1rem 0;
+		display: block;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.nav-general p {
+		display: block;
+		line-height: 1rem;
+		font-size: 1rem;
+		flex: 0;
+	}
+
+	.nav-general .links {
+		flex: 1 100%;
+		border-top: 1px solid #009688;
+		margin-bottom: 2rem;
+		display: none;
+	}
+
+	.nav-general ul {
+		flex-flow: column nowrap;
+		align-items: center;
+		padding: 0;
+	}
+
+	.nav-general li {
+		margin: 0;
+	}
+
+	.nav-general li a {
+		padding: 2rem 0 0.5rem 0;
+		border-bottom: 6px solid transparent;
+		line-height: 1.25rem;
+	}
+
+	/* Portada */
+
+	.header h1 {
+		font-size: 3rem;
+	}
+
+	/* Resume */
+
 	.sect-descr {
 		margin-right: 1rem;
+	}
+
+	/* Contact */
+
+	#contact ul li {
+		display: block;
+		padding: 0;
+		border: none !important;
 	}
 
 	.map {
@@ -749,8 +840,31 @@ footer {
 		height: 300px;
 	}
 
-	.header h1 {
-		font-size: 3rem;
+	/* Footer */
+
+	.footer-flex {
+		align-items: flex-start;
+		flex-flow: column wrap;
+		align-items: center;
+	}
+
+	.social-foot {
+		padding: 3rem 0 1rem 0;
+	}
+
+	.copyright {
+		padding: 0;
+		padding-bottom: 2rem;
+	}
+
+	.copyright p {
+		text-align: center;
 	}
 }
 
+@media all and (max-width: 619px) {
+	.study, .course {
+		flex: 1 100%;
+		margin: 0 1rem 1rem 1rem;
+	}
+}

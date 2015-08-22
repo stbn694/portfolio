@@ -66,6 +66,21 @@ $(document).ready(function () {
 	});
 
 
+	/* Hide or show menu clicking on the burger icon on mobile view */
+
+	var menuShown = false;
+	$('.menu-btn').click(function () {
+		if(menuShown) {
+			$('.menu-btn').attr("src","images/burger.png");
+			menuShown = false;
+		} else {
+			$('.menu-btn').attr("src","images/close.svg");
+			menuShown = true;
+		}
+		$('.nav-general .links').stop().slideToggle(800);
+	});
+
+
 	/* Highlight the carrect link in the navigation bar based on the scrolling */
 
 	var checkSection = function () {
