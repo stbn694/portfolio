@@ -40,7 +40,7 @@ body {
 
 .nav-general .container {
 	display: flex;
-	align-items: center;
+	/*align-items: center;*/
 	flex-flow: row wrap;
 	justify-content: flex-start;
 }
@@ -69,30 +69,34 @@ body {
 
 .nav-general .links {
 	height: inherit;
+	display: flex;
 }
 
 .nav-general ul {
 	margin: 0;
 	height: inherit;
 	display: flex;
-	align-items: flex-start;
 	flex-flow: row nowrap;
 }
 
 .nav-general li {
 	display: inline-block;
 	margin-left: 1.75rem;
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 .nav-general li a {
 	display: block;
-	padding: 1.7rem 0;
+	padding: 0rem 0;
 	border-bottom: 6px solid transparent;
 	text-transform: uppercase;
 	line-height: 1.25rem;
 	text-decoration: none;
 	color: #707070;
 	transition: all 0.3s ease-in-out;
+	display: flex;
+	align-items: center;
 }
 
 .nav-general a:hover {
@@ -248,7 +252,7 @@ article.with-color h2 {
 
 .btn-clear {
 	clear: both;
-	padding: 1.25rem;
+	padding: 1rem;
 }
 
 .bottom-btn {
@@ -361,20 +365,15 @@ article.with-color h2 {
 }
 
 .sect-descr {
-	flex: 1;
-	min-width: 250px;
-	margin: 0 1rem 1rem 1rem;
-	background-color: #FFFFFF;
-	border-radius: 2px;
-	box-shadow: 0 1px 2px #606060;
-	padding: 1rem;
+	flex: 1 100%;
+	margin: 1rem;
 }
 
 .sect-descr h3 {
 	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 1rem;
-	font-size: 1.625rem;
+	font-size: 1rem;
 	color: #303030;
 }
 
@@ -383,7 +382,7 @@ article.with-color h2 {
 	display: flex;
 	align-items: flex-start;
 	flex-flow: row wrap;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .skill {
@@ -392,6 +391,7 @@ article.with-color h2 {
 	box-shadow: 0 1px 2px #606060;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
+	margin: 1rem 0.5rem 1rem 0.5rem;
 }
 
 .skill > p {
@@ -433,6 +433,7 @@ article.with-color h2 {
 	width: 250px;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
+	margin: 1rem 0.5rem 1rem 0.5rem;
 	background-color: #FFFFFF;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px #606060;
@@ -480,6 +481,10 @@ article.with-color h2 {
 
 #resume .bottom-btn {
 	margin: 0;
+}
+
+#courses .btn-clear {
+	padding-top: 0;
 }
 
 #courses, #edu {
@@ -788,6 +793,7 @@ footer {
 		display: block;
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
+		align-self: center;
 	}
 
 	.nav-general p {
@@ -872,5 +878,11 @@ footer {
 	.study, .course {
 		flex: 1 100%;
 		margin: 0 1rem 1rem 1rem;
+	}
+}
+
+@media all and (max-height: 450px) {
+	header {
+		height: 70vh;
 	}
 }

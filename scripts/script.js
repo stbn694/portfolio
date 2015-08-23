@@ -32,7 +32,9 @@ $(document).ready(function () {
 
 	$('li > a[href^="#"]').on('click', function (e) {
 	    e.preventDefault();
-	    menuSlide();
+	    if (menuShown) {
+	    	menuSlide();
+	    }
 	});
 
 
@@ -77,9 +79,20 @@ $(document).ready(function () {
 	$('.menu-btn').click(function () {
 		menuSlide();
 	});
+	
+	$(window).resize(function () {
+		if ($(window).width() > 650) {
+			$('.nav-general .links').css('display', 'flex');
+		} else {
+			$('.nav-general .links').css('display', 'block');
+			$('.nav-general .links').css('display', 'none');
+			menuShown = false;
+			$('.menu-btn').attr("src","images/burger.png");
+		}
+	});
 
 	var menuSlide = function () {
-		if(menuShown) {
+		if (menuShown) {
 			$('.menu-btn').attr("src","images/burger.png");
 			menuShown = false;
 		} else {
